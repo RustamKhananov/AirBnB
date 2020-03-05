@@ -1,0 +1,31 @@
+.hosted {
+  width: 490px;
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 15px 0 0;
+  }
+
+  &__were {
+    font-family: Avenir, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__article {
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #118488;
+    border-radius: 4px;
+    color: #118488;
+    margin: 25px 0;
+  }
+}

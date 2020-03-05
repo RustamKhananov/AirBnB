@@ -1,0 +1,44 @@
+
+.reviews {
+ 
+  &__title {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 34px;
+  }
+
+  &__circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    float: left;
+    margin: 0;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-left: 21px;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 2px;
+  }
+
+  &__date {
+    display: inline-block;
+    margin-left: 21px;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 2px;
+  }
+
+  &__review {
+    width: 490px;
+    height: 120px;
+    margin: 13px 0 0;
+  }
+ 
+ 
+}
