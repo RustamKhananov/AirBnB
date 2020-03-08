@@ -9,15 +9,23 @@
   padding: 30px;
   position: sticky;
   top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   float: right;
+
+  @media screen and (max-width: 345px) {
+    width: auto;
+  }
+
+  @media screen and (max-width: 810px) {
+    float: none;
+    position: relative;
+    top: 0;
+  }
   
-
   &__price {
-    font-size: 16px;
-    font-family: Avenir, sans-serif;
-    line-height: 19px;
     margin-bottom: 23px;
-
   }
   
   &__input {
@@ -27,8 +35,9 @@
   background-color: white;
   display: block;
   height: 50px;
-  width: 270px;
-  margin: 16px 0;
+  right: 0;
+  left: 0;
+  margin-top: 16px;
   }
 
   &__button {
@@ -37,7 +46,13 @@
     color: white;
     display: block;
     height: 50px;
-    width: 270px;
     margin-top: 24px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+
+    &:hover {
+      background-color: white;
+      color: #fd5c63;
+    }
   }
 }

@@ -5,24 +5,26 @@
   margin: 0 auto;
   box-shadow: 0px -1px 0px #e1e7ed;
   border: 1px solid white;
-
-  &__table {
+  
+  &__container {
+    display: flex;
     width: 901px;
     margin: 40px auto;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      padding: 0 10px;
+    } 
   }
 
-  &__cell {
-    width: 300px;
-    height: 27px;
-  }
-
-  &__head {
-    text-align: left;
-    padding-bottom: 20px;
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   &__link {
     text-decoration: none;
     color: #3d4e61;
+    height: 27px;
   }
 }
