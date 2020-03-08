@@ -9,23 +9,28 @@
   }
 
   &__were {
-    font-family: Avenir, sans-serif;
     font-size: 14px;
     line-height: 16px;
-  }
-
-  &__article {
-    font-family: Avenir, sans-serif;
-    font-size: 16px;
-    line-height: 19px;
   }
 
   &__button {
     width: 150px;
     height: 50px;
     border: 1px solid #118488;
+    background-color: white;
     border-radius: 4px;
     color: #118488;
     margin: 25px 0;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: #118488;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 490px) {
+    width: 100%;
   }
 }

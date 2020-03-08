@@ -12,7 +12,7 @@
 <body>
   <header class="header">
     <img class="header__logo" src="./images/Rectangle 2.jpg" alt="Logo AirBnB">
-    <nav>
+    <nav class="header__nav">
       <a class="header__link" href="">
         Become a host
       </a>
@@ -37,12 +37,12 @@
       <button class="booking-form__button" type="submit">Book</button>
     </form>
 
-
     <h1 class="content__primary-title">Quiet apartment</h1>
     <p class="content__subtitle">Entire apartment</p>
     <p class="content__condition">4 guests</p>
     <p class="content__condition">1 bed</p>
     <p class="content__condition">1 bath</p>
+
     <p class="content__description">City Apartment is newly renovated in the hear
       t of Budapest, right in the city center. Lor
       em ipsum dolor sit amet, consectetur adipi
@@ -55,126 +55,104 @@
       Contact host
     </a>
 
-    <h3>Amenities</h3>
-    <p class="content__amenities">
-      Elevator
-    </p>
-    <p class="content__amenities">
-      Hair dryer
-    </p><br>
-    <p class="content__amenities">
-      Washer
-    </p>
-    <p class="content__amenities">
-      Kitchen
-    </p><br>
-    <a class="content__links" href="">
-      Show All Amenities
-    </a>
+    <div class="content__amenities amenities">
+      <h3>Amenities</h3>
+      <p class="amenities__amenity">
+        Elevator
+      </p>
+      <p class="amenities__amenity">
+        Hair dryer
+      </p><br>
+      <p class="amenities__amenity">
+        Washer
+      </p>
+      <p class="amenities__amenity">
+        Kitchen
+      </p><br>
+      <a class="content__links" href="">
+        Show All Amenities
+      </a>
+    </div>
 
     <div class="reviews content__reviews">
       <h2 class="reviews__title">
         Reviews
       </h2>
-      <div class="reviews__block">
-        <p class="reviews__circle"></p>
-        <p class="reviews__name">
-          John
-        </p><br>
-        <p class="reviews__date">
-          September 2016
-        </p>
-        <article class="reviews__review">
+      <article class="reviews__block">
+        <div class="reviews__container">
+          <p class="reviews__circle"></p>
+          <div class="reviews__subcontainer">
+            <p class="reviews__name">
+              John
+            </p>
+            <p class="reviews__date">
+              September 2016
+            </p>
+          </div>
+        </div>
+        <p class="reviews__review">
           Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
           et dolore magna aliqua. Ut enim ad minim veniam.
-        </article>
+        </p>
+      </article>
 
-      </div>
-      <div class="reviews__block">
+      <article class="reviews__block">
+        <div class="reviews__container">
         <p class="reviews__circle"></p>
+        <div class="reviews__subcontainer">
         <p class="reviews__name">
           John
-        </p><br>
-        <p class="reviews__date">
-          September 2016
         </p>
-        <article class="reviews__review">
+        <p class="reviews__date">
+          September 2017
+        </p>
+        </div>
+        </div>
+        <p class="reviews__review">
           Sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Ut enim ad minim veniam.
-        </article>
-      </div>
+        </p>
+      </article>
     </div>
 
-    <div class="hosted content__hosted">
+    <article class="hosted content__hosted">
       <h2 class="hosted__title">Hosted by Jane</h2>
       <p class="hosted__were">Budapest, Hungary</p>
-      <article class="hosted__article">
+      <p class="hosted__article">
         Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore
         et magna aliqua.
-      </article>
-      <form>
-        <button class="hosted__button">
-          Contact host
-        </button>
-      </form>
-
-    </div>
+      </p>
+      <button class="hosted__button">
+        Contact host
+      </button>
+    </article>
 
   </main>
 
   <footer class="footer">
-    <table class="footer__table">
-      <tr>
-        <th class="footer__cell footer__head">Airbnb</th>
-        <th class="footer__cell footer__head">Discover</th>
-        <th class="footer__cell footer__head">Hosting</th>
-      </tr>
-      <tr>
-        <td class="footer__cell">
-          <a class="footer__link" href="">About</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Travel credit</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Why host</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Press</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Business</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Hospitality</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Help</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Guidebooks</a>
-        </td>
-        <td class="footer__cell">
-          <a class="footer__link" href="">Community</a>
-        </td>
-      </tr>
-
-
-    </table>
-
-
+    <div class="footer__container">
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Airbnb</h3>
+        <a class="footer__link" href="">About</a>
+        <a class="footer__link" href="">Press</a>
+        <a class="footer__link" href="">Help</a>
+      </div>
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Discover</h3>
+        <a class="footer__link" href="">Travel credit</a>
+        <a class="footer__link" href="">Business</a>
+        <a class="footer__link" href="">Guidebooks</a>
+      </div>
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Hosting</h3>
+        <a class="footer__link" href="">Why host</a>
+        <a class="footer__link" href="">Hospitality</a>
+        <a class="footer__link" href="">Community</a>
+      </div>
   </footer>
 
-
 </body>
-
-
-
 </html>
