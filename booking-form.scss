@@ -18,10 +18,11 @@
     width: auto;
   }
 
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 840px) {
     float: none;
     position: relative;
     top: 0;
+    left: calc(50% - 165px);
   }
   
   &__price {
@@ -38,6 +39,7 @@
   right: 0;
   left: 0;
   margin-top: 16px;
+  padding-left: 10px;
   }
 
   &__button {
@@ -49,6 +51,11 @@
     margin-top: 24px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 20px;
+    outline: none;
+    :focus {
+      background-color: #d9db61;
+
+    }
 
     &:hover {
       background-color: white;
