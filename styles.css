@@ -376,11 +376,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 1439px) {
-  .promo {
-    padding-top: 32%;
-  }
-}
 @media screen and (max-width: 500px) {
   .promo {
     height: 200px;
