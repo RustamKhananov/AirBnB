@@ -12,8 +12,10 @@
 <body>
   <header class="header">
     <img class="header__logo" src="./images/Rectangle 2.jpg" alt="Logo AirBnB">
+    <label class="header__label" for="header__toggler"></label>
+    <input class="header__toggler" type="checkbox" id="header__toggler">
     <nav class="header__nav">
-      <a class="header__link" href="">
+      <a class="header__link" href="#">
         Become a host
       </a>
       <a class="header__link" href="">
@@ -22,6 +24,8 @@
       <a class="header__link" href="">
         Messages
       </a>
+     
+      
     </nav>
     <img class="header__photo" src="./images/Ellipse.jpg" alt="User Photo">
   </header>
@@ -30,7 +34,7 @@
   </section>
 
   <main class="content">
-    <form class="booking-form" action="">
+    <form class="booking-form" action="" method="POST">
       <p class="booking-form__price">25$ per night</p>
       <input class="booking-form__input" placeholder="Date" onfocus="(type='date')">
       <input class="booking-form__input" placeholder="Guests" type="number">
@@ -132,7 +136,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__container">
       <div class="footer__subcontainer">
         <h3 class="footer__title">Airbnb</h3>

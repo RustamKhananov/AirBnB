@@ -26,5 +26,14 @@
     text-decoration: none;
     color: #3d4e61;
     line-height: 27px;
+    outline: none;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:focus {
+      transform: scale(1.1);
+    }
   }
 }

@@ -13,16 +13,21 @@
   flex-direction: column;
   align-items: stretch;
   float: right;
+  z-index: 0;
 
-  @media screen and (max-width: 345px) {
-    width: auto;
-  }
+ 
 
   @media screen and (max-width: 840px) {
     float: none;
     position: relative;
     top: 0;
     left: calc(50% - 165px);
+  }
+
+  @media screen and (max-width: 345px) {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    left: 0;
   }
   
   &__price {
@@ -40,6 +45,14 @@
   left: 0;
   margin-top: 16px;
   padding-left: 10px;
+  outline: none;
+  &:hover {
+    box-shadow: 0 0 5px 5px grey;
+  }
+  &:focus {
+    box-shadow: 0 0 5px 5px grey;
+  }
+
   }
 
   &__button {
@@ -52,9 +65,11 @@
     transition: background-color 0.3s, color 0.3s;
     font-size: 20px;
     outline: none;
-    :focus {
-      background-color: #d9db61;
-
+  
+    &:focus {
+      box-shadow: 0 0 5px 5px grey;
+      background-color: white;
+      color: #fd5c63;
     }
 
     &:hover {
