@@ -22,9 +22,14 @@
     color: #118488;
     margin: 25px 0;
     font-size: 20px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.5s;
 
     &:hover {
+      background-color: #118488;
+      color: white;
+    }
+    &:focus {
+      box-shadow: 0 0 5px 5px grey;
       background-color: #118488;
       color: white;
     }

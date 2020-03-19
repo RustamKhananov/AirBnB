@@ -11,22 +11,48 @@
   background-color: white;
   box-shadow: 0px 1px 0px #e1e7ed;
 }
-@media screen and (max-width: 450px) {
-  .header {
-    height: 90px;
-    justify-content: center;
-  }
+.header__toggler {
+  display: none;
+}
+.header__toggler:checked ~ .header__nav {
+  transform: rotate(0);
 }
 .header__nav {
   display: flex;
   margin-right: 87px;
   height: 100%;
+  transition: 1s;
+  transform-origin: right top;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .header__nav {
+    background-color: #fd5c63;
+    color: white;
+    position: absolute;
+    z-index: 0;
+    top: 60px;
+    width: 100vw;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 0;
+    height: calc(100vh - 60px);
+    transform: rotate(-90deg);
+    align-items: center;
+  }
+}
+.header__label {
+  display: none;
+  height: 30px;
+  width: 30px;
+  background-image: url(images/burger.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 500px) {
+  .header__label {
+    display: block;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
   }
 }
 .header__logo {
@@ -43,6 +69,22 @@
   font-weight: 400;
   margin: auto 15px;
   text-decoration: none;
+  outline: none;
+}
+.header__link:hover {
+  color: blue;
+}
+.header__link:focus {
+  color: blue;
+}
+@media screen and (max-width: 500px) {
+  .header__link {
+    font-family: Avenir, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin: 6vh 0;
+  }
 }
 .header__photo {
   position: absolute;
@@ -67,11 +109,7 @@
   flex-direction: column;
   align-items: stretch;
   float: right;
-}
-@media screen and (max-width: 345px) {
-  .booking-form {
-    width: auto;
-  }
+  z-index: 0;
 }
 @media screen and (max-width: 840px) {
   .booking-form {
@@ -79,6 +117,13 @@
     position: relative;
     top: 0;
     left: calc(50% - 165px);
+  }
+}
+@media screen and (max-width: 345px) {
+  .booking-form {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    left: 0;
   }
 }
 .booking-form__price {
@@ -95,6 +140,13 @@
   left: 0;
   margin-top: 16px;
   padding-left: 10px;
+  outline: none;
+}
+.booking-form__input:hover {
+  box-shadow: 0 0 5px 5px grey;
+}
+.booking-form__input:focus {
+  box-shadow: 0 0 5px 5px grey;
 }
 .booking-form__button {
   background-color: #fd5c63;
@@ -107,8 +159,10 @@
   font-size: 20px;
   outline: none;
 }
-.booking-form__button :focus {
-  background-color: #d9db61;
+.booking-form__button:focus {
+  box-shadow: 0 0 5px 5px grey;
+  background-color: white;
+  color: #fd5c63;
 }
 .booking-form__button:hover {
   background-color: white;
@@ -177,9 +231,14 @@
   color: #118488;
   margin: 25px 0;
   font-size: 20px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.5s;
 }
 .hosted__button:hover {
+  background-color: #118488;
+  color: white;
+}
+.hosted__button:focus {
+  box-shadow: 0 0 5px 5px grey;
   background-color: #118488;
   color: white;
 }
@@ -216,6 +275,14 @@
   text-decoration: none;
   color: #3d4e61;
   line-height: 27px;
+  outline: none;
+  transition: transform 0.5s;
+}
+.footer__link:hover {
+  transform: scale(1.1);
+}
+.footer__link:focus {
+  transform: scale(1.1);
 }
 
 @font-face {
@@ -280,6 +347,16 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #3d4e61;
+  transition: transform 0.5s, color 0.5s;
+  outline: none;
+}
+.content__links:hover {
+  transform: scale(1.1);
+  color: #fd5c63;
+}
+.content__links:focus {
+  transform: scale(1.1);
+  color: #fd5c63;
 }
 .content__subtitle {
   color: #687c94;
@@ -302,7 +379,11 @@ body {
 @media screen and (max-width: 1439px) {
   .promo {
     padding-top: 32%;
-    height: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .promo {
+    height: 200px;
   }
 }
 

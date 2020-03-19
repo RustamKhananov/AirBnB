@@ -69,6 +69,16 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: #3d4e61;
+    transition: transform 0.5s, color 0.5s;
+    outline: none;
+    &:hover {
+      transform: scale(1.1);
+      color: #fd5c63;
+    }
+    &:focus {
+      transform: scale(1.1);
+      color: #fd5c63;
+    }
   }
 
   &__subtitle {
@@ -94,6 +104,12 @@ body {
 
   @media screen and (max-width: 1439px) {
     padding-top: 32%;
-    height: 0;
+    
+  }
+
+  
+
+  @media screen and (max-width: 500px) {
+    height: 200px;
   }
 }
